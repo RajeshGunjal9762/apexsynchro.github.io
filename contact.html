@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="Images/favicon.svg" />
   <style>
     :root {
       --white: #ffffff;
@@ -76,7 +77,7 @@
     .brand {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
+      gap: 0;
       text-decoration: none;
       color: var(--ink);
       font-weight: 800;
@@ -85,21 +86,11 @@
       text-transform: uppercase;
     }
 
-    .logo-mark {
-      width: 16px;
-      height: 16px;
-      border: 1px solid #60cceb;
-      position: relative;
-      transform: rotate(45deg);
-      border-radius: 2px;
-    }
-
-    .logo-mark::before {
-      content: "";
-      position: absolute;
-      inset: 3px;
-      border: 1px solid #1f94c8;
-      border-radius: 1px;
+    .brand-logo {
+      width: clamp(138px, 14vw, 190px);
+      height: auto;
+      display: block;
+      flex-shrink: 0;
     }
 
     .nav-links {
@@ -821,8 +812,7 @@
   <header class="site-header">
     <div class="container nav-wrap">
       <a href="index.html" class="brand" aria-label="Apex Synchro home">
-        <span class="logo-mark" aria-hidden="true"></span>
-        <span>Apex Synchro</span>
+        <img class="brand-logo" src="Images/logo.svg" alt="" aria-hidden="true" />
       </a>
 
       <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">+</button>
@@ -991,9 +981,8 @@
   <footer class="footer">
     <div class="footer-grid">
       <div>
-        <a href="index.html" class="brand" style="color:#d2e5f6;margin-bottom:10px;display:inline-flex;">
-          <span class="logo-mark" aria-hidden="true"></span>
-          <span>Apex Synchro</span>
+        <a href="index.html" class="brand" style="color:#d2e5f6;margin-bottom:10px;display:inline-flex;" aria-label="Apex Synchro home">
+          <img class="brand-logo" src="Images/LOGO WHITE.svg" alt="" aria-hidden="true" />
         </a>
         <p>
           Global leader in pharmaceutical and surgical materials trade. Supplying premium medical consumables to
