@@ -1,0 +1,1315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apex Synchro | About</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --white: #ffffff;
+      --bg-page: #edf2f7;
+      --navy: #1d3968;
+      --navy-2: #12325f;
+      --navy-3: #0f2b52;
+      --cyan: #18addf;
+      --cyan-2: #34bde9;
+      --ink: #0f2f58;
+      --muted: #6f89a8;
+      --line: #d4e0ee;
+      --radius: 6px;
+      --shadow: 0 12px 26px rgba(18, 44, 84, 0.08);
+      --max: 1280px;
+      --container: min(var(--max), calc(100% - 80px));
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body {
+      width: 100%;
+      overflow-x: clip;
+      background: var(--bg-page);
+      color: var(--ink);
+      font-family: "Plus Jakarta Sans", -apple-system, "system-ui", sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      padding-top: 62px;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: var(--container);
+      margin-inline: auto;
+    }
+
+    .site-header {
+      background: #fff;
+      border-bottom: 1px solid #e7edf5;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+    }
+
+    .nav-wrap {
+      min-height: 62px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      color: var(--ink);
+      font-weight: 800;
+      font-size: 18px;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+    }
+
+    .logo-mark {
+      width: 16px;
+      height: 16px;
+      border: 1px solid #60cceb;
+      position: relative;
+      transform: rotate(45deg);
+      border-radius: 2px;
+    }
+
+    .logo-mark::before {
+      content: "";
+      position: absolute;
+      inset: 3px;
+      border: 1px solid #1f94c8;
+      border-radius: 1px;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 22px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #193457;
+      font-size: 17px;
+      font-weight: 600;
+      padding: 3px 0;
+      border-bottom: 2px solid transparent;
+      transition: color 0.2s ease, border-color 0.2s ease;
+    }
+
+    .nav-links a.active,
+    .nav-links a:hover {
+      color: #159fd3;
+      border-color: #159fd3;
+    }
+
+    .btn {
+      border: 1px solid transparent;
+      border-radius: 4px;
+      min-height: 34px;
+      padding: 0 16px;
+      font-size: 17px;
+      text-decoration: none;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+      cursor: pointer;
+      font-family: inherit;
+    }
+
+    .btn-primary {
+      background: var(--cyan);
+      color: #fff;
+      box-shadow: 0 8px 18px rgba(24, 173, 223, 0.28);
+    }
+
+    .btn-primary:hover {
+      background: var(--cyan-2);
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.16);
+      border-color: rgba(255, 255, 255, 0.42);
+      color: #fff;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.24);
+      transform: translateY(-1px);
+    }
+
+    .menu-btn {
+      display: none;
+      border: 1px solid #dce8f5;
+      background: #fff;
+      color: #21426e;
+      width: 36px;
+      height: 36px;
+      border-radius: 6px;
+      font-size: 23px;
+      line-height: 1;
+    }
+
+    .kicker {
+      color: #14a9de;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1.15px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    /* Hero */
+    .about-hero {
+      background: #12325f;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+      min-height: 340px;
+    }
+
+    .about-hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(15, 44, 84, 0.92) 0%, rgba(15, 44, 84, 0.78) 45%, rgba(15, 44, 84, 0.5) 100%),
+        url("https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1800&q=80") center/cover;
+    }
+
+    .about-hero .inner {
+      position: relative;
+      z-index: 1;
+      width: var(--container);
+      margin-inline: auto;
+      padding: 54px 0 60px;
+    }
+
+    .crumbs {
+      color: #9dc0e4;
+      font-size: 13px;
+      margin-bottom: 16px;
+    }
+
+    .crumbs a {
+      color: #9dc0e4;
+      text-decoration: none;
+    }
+
+    .crumbs a:hover {
+      color: #cfe6fb;
+    }
+
+    .about-hero .kicker {
+      color: #39c7ec;
+    }
+
+    .about-hero h1 {
+      font-size: 44px;
+      line-height: 1.06;
+      font-weight: 800;
+      letter-spacing: -0.6px;
+      margin-bottom: 14px;
+      max-width: 520px;
+    }
+
+    .about-hero p {
+      font-size: 15px;
+      line-height: 1.6;
+      color: #cdddf0;
+      max-width: 560px;
+    }
+
+    /* Mission */
+    .mission {
+      background: #fff;
+      padding: 66px 0;
+    }
+
+    .mission-grid {
+      width: var(--container);
+      margin-inline: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+
+    .mission-statement {
+      border-left: 3px solid var(--cyan);
+      padding-left: 22px;
+    }
+
+    .mission-statement p {
+      font-size: 24px;
+      line-height: 1.4;
+      color: #173865;
+      font-weight: 700;
+      letter-spacing: -0.2px;
+    }
+
+    .value-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .value-card {
+      border: 1px solid #dde7f2;
+      border-radius: 8px;
+      padding: 18px;
+      background: #fbfdff;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .value-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow);
+    }
+
+    .icon-chip {
+      width: 34px;
+      height: 34px;
+      border-radius: 7px;
+      border: 1px solid #cae4f3;
+      color: #12a7dc;
+      display: grid;
+      place-items: center;
+      margin-bottom: 12px;
+      background: #f4fbff;
+    }
+
+    .icon-chip svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    .value-card h3 {
+      color: #173865;
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 7px;
+    }
+
+    .value-card p {
+      font-size: 13.5px;
+      color: #6f89a8;
+      line-height: 1.55;
+    }
+
+    /* Story */
+    .story {
+      background: #f0f5fb;
+      padding: 64px 0;
+    }
+
+    .story-grid {
+      width: var(--container);
+      margin-inline: auto;
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 44px;
+      align-items: center;
+    }
+
+    .story-media {
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .story-media img {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+    }
+
+    .story-badge {
+      position: absolute;
+      left: 20px;
+      bottom: 20px;
+      background: #fff;
+      border-radius: 8px;
+      padding: 14px 18px;
+      box-shadow: 0 10px 24px rgba(12, 34, 66, 0.22);
+    }
+
+    .story-badge strong {
+      display: block;
+      font-size: 30px;
+      color: #16386a;
+      line-height: 1;
+      font-weight: 800;
+    }
+
+    .story-badge span {
+      font-size: 12px;
+      color: #6f89a8;
+      font-weight: 600;
+    }
+
+    .story-text h2 {
+      color: #173865;
+      font-size: 32px;
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.4px;
+      margin-bottom: 16px;
+      max-width: 420px;
+    }
+
+    .story-text p {
+      font-size: 14.5px;
+      color: #5f7b9c;
+      line-height: 1.66;
+      margin-bottom: 14px;
+    }
+
+    /* Milestones */
+    .milestones {
+      background: #12325f;
+      color: #fff;
+      padding: 60px 0 66px;
+    }
+
+    .milestones .head {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .milestones .kicker {
+      color: #39c7ec;
+    }
+
+    .milestones h2 {
+      font-size: 34px;
+      font-weight: 800;
+      letter-spacing: -0.4px;
+    }
+
+    .timeline {
+      width: var(--container);
+      margin-inline: auto;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 20px;
+    }
+
+    .milestone {
+      position: relative;
+      padding-top: 30px;
+    }
+
+    .milestone::before {
+      content: "";
+      position: absolute;
+      top: 9px;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: rgba(140, 178, 224, 0.34);
+    }
+
+    .milestone .dot {
+      position: absolute;
+      top: 2px;
+      left: 0;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: #16386a;
+      border: 2px solid #39c7ec;
+      display: grid;
+      place-items: center;
+      color: #39c7ec;
+    }
+
+    .milestone .dot svg {
+      width: 9px;
+      height: 9px;
+    }
+
+    .milestone .year {
+      color: #39c7ec;
+      font-size: 18px;
+      font-weight: 800;
+      margin-bottom: 4px;
+    }
+
+    .milestone h4 {
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: #eaf3fc;
+    }
+
+    .milestone p {
+      font-size: 12px;
+      color: #b7cae2;
+      line-height: 1.5;
+    }
+
+    /* Leaders */
+    .leaders {
+      background: #fff;
+      padding: 66px 0;
+    }
+
+    .leaders .head {
+      text-align: center;
+      margin-bottom: 38px;
+    }
+
+    .leaders h2 {
+      color: #173865;
+      font-size: 34px;
+      font-weight: 800;
+      letter-spacing: -0.4px;
+      margin-bottom: 10px;
+    }
+
+    .leaders .head p {
+      color: #7993af;
+      font-size: 15px;
+      max-width: 560px;
+      margin-inline: auto;
+      line-height: 1.55;
+    }
+
+    .leader-grid {
+      width: min(1040px, 100%);
+      margin-inline: auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    .leader-card {
+      text-align: center;
+    }
+
+    .leader-photo {
+      width: 116px;
+      height: 116px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 16px;
+      border: 3px solid #e6eef8;
+    }
+
+    .leader-card h3 {
+      color: #173865;
+      font-size: 19px;
+      font-weight: 800;
+      margin-bottom: 3px;
+    }
+
+    .leader-role {
+      color: #1899d1;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .leader-card p {
+      font-size: 13.5px;
+      color: #6f89a8;
+      line-height: 1.6;
+      max-width: 300px;
+      margin-inline: auto;
+    }
+
+    /* Operations */
+    .operations {
+      background: #f0f5fb;
+      padding: 64px 0;
+    }
+
+    .operations .head {
+      text-align: center;
+      margin-bottom: 36px;
+    }
+
+    .operations h2 {
+      color: #173865;
+      font-size: 34px;
+      font-weight: 800;
+      letter-spacing: -0.4px;
+      margin-bottom: 10px;
+    }
+
+    .operations .head p {
+      color: #7993af;
+      font-size: 15px;
+      max-width: 620px;
+      margin-inline: auto;
+      line-height: 1.55;
+    }
+
+    .ops-grid {
+      width: min(1040px, 100%);
+      margin-inline: auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .ops-card {
+      background: #fff;
+      border: 1px solid #dde7f2;
+      border-radius: 8px;
+      padding: 20px 18px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .ops-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow);
+    }
+
+    .ops-card .bar {
+      width: 26px;
+      height: 3px;
+      background: var(--cyan);
+      border-radius: 3px;
+      margin-bottom: 14px;
+    }
+
+    .ops-card h4 {
+      color: #173865;
+      font-size: 18px;
+      font-weight: 800;
+      margin-bottom: 4px;
+    }
+
+    .ops-card .ops-tag {
+      display: block;
+      color: #1899d1;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 10px;
+    }
+
+    .ops-card p {
+      font-size: 13px;
+      color: #6f89a8;
+      line-height: 1.55;
+    }
+
+    /* CTA */
+    .cta {
+      min-height: 300px;
+      position: relative;
+      overflow: hidden;
+      background: #12335f;
+    }
+
+    .cta::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(16, 48, 91, 0.9), rgba(16, 48, 91, 0.9)),
+        url("https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1800&q=80") center/cover;
+      filter: saturate(0.92);
+    }
+
+    .cta .inner {
+      position: relative;
+      z-index: 1;
+      width: min(1040px, 100%);
+      margin-inline: auto;
+      min-height: 300px;
+      padding: 56px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .cta-text {
+      max-width: 560px;
+      color: #fff;
+    }
+
+    .cta .kicker {
+      color: #39c7ec;
+    }
+
+    .cta-text h2 {
+      font-size: 38px;
+      line-height: 1.05;
+      margin: 4px 0 12px;
+      letter-spacing: -0.4px;
+      font-weight: 800;
+    }
+
+    .cta-text p {
+      font-size: 15px;
+      line-height: 1.6;
+      color: #c8dcf0;
+    }
+
+    .cta-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .cta .btn-secondary {
+      background: #fff;
+      color: #16386a;
+      border-color: #fff;
+    }
+
+    .cta .btn-secondary:hover {
+      background: #e9f3fb;
+    }
+
+    /* Footer */
+    .footer {
+      background: #183760;
+      color: #c9daed;
+      padding: 34px 0 20px;
+    }
+
+    .footer-grid {
+      width: min(1040px, 100%);
+      margin-inline: auto;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr 1fr 1fr;
+      gap: 30px;
+    }
+
+    .footer h5 {
+      font-size: 14px;
+      letter-spacing: 1px;
+      color: #8fb8e0;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+
+    .footer p,
+    .footer a {
+      display: block;
+      color: #d2e2f2;
+      text-decoration: none;
+      font-size: 15px;
+      line-height: 1.65;
+      margin-bottom: 4px;
+    }
+
+    .footer a:hover {
+      color: #8fe0ff;
+    }
+
+    .foot-site {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      color: #9db7d6 !important;
+    }
+
+    .foot-site svg {
+      width: 15px;
+      height: 15px;
+      flex-shrink: 0;
+    }
+
+    .foot-contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .foot-ico {
+      width: 18px;
+      height: 18px;
+      color: #58b7e6;
+      flex-shrink: 0;
+      margin-top: 3px;
+    }
+
+    .foot-contact-item .foot-label {
+      display: block;
+      color: #8fb0d4;
+      font-size: 12px;
+      margin-bottom: 2px;
+    }
+
+    .foot-contact-item a,
+    .foot-contact-item p {
+      margin-bottom: 0;
+    }
+
+    /* Cookie bar */
+    .cookie-bar {
+      border-top: 1px solid #e2e9f2;
+      background: #fff;
+      padding: 14px 0;
+    }
+
+    .cookie-grid {
+      width: var(--container);
+      margin-inline: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .cookie-grid .c-text strong {
+      display: block;
+      color: #16386a;
+      font-size: 14px;
+      margin-bottom: 3px;
+    }
+
+    .cookie-grid .c-text p {
+      color: #6f89a8;
+      font-size: 12.5px;
+      line-height: 1.45;
+      max-width: 900px;
+    }
+
+    .cookie-actions {
+      display: inline-flex;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+
+    .cookie-btn {
+      min-height: 36px;
+      padding: 0 16px;
+      border-radius: 5px;
+      border: 1px solid #16386a;
+      background: #16386a;
+      color: #fff;
+      font-weight: 700;
+      font-size: 13px;
+      cursor: pointer;
+      font-family: inherit;
+    }
+
+    .cookie-btn.decline {
+      background: #16386a;
+    }
+
+    .cookie-btn.accept {
+      background: var(--cyan);
+      border-color: var(--cyan);
+    }
+
+    .cookie-btn:hover {
+      opacity: 0.92;
+    }
+
+    [data-reveal] {
+      opacity: 0;
+      transform: translateY(22px);
+    }
+
+    @media (max-width: 1180px) {
+      :root {
+        --container: min(var(--max), calc(100% - 40px));
+      }
+
+      .about-hero h1 {
+        font-size: clamp(30px, 5vw, 44px);
+      }
+
+      .timeline {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 26px 20px;
+      }
+
+      .milestone::before {
+        display: none;
+      }
+    }
+
+    @media (max-width: 960px) {
+      .menu-btn {
+        display: inline-grid;
+        place-items: center;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: 62px;
+        left: 20px;
+        right: 20px;
+        background: #fff;
+        border: 1px solid #dbe7f4;
+        border-radius: 8px;
+        padding: 12px;
+        display: grid;
+        gap: 8px;
+        transform: scaleY(0);
+        transform-origin: top;
+        opacity: 0;
+        pointer-events: none;
+        transition: transform 0.2s ease, opacity 0.2s ease;
+        z-index: 120;
+      }
+
+      .nav-links.open {
+        transform: scaleY(1);
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      .desktop-cta {
+        display: none;
+      }
+
+      .mission-grid,
+      .story-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .leader-grid,
+      .ops-grid,
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 680px) {
+      :root {
+        --container: min(var(--max), calc(100% - 22px));
+      }
+
+      .value-grid,
+      .timeline,
+      .leader-grid,
+      .ops-grid,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .mission-statement p {
+        font-size: 20px;
+      }
+
+      .cta .inner {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 44px 0;
+      }
+
+      .cta-actions {
+        width: 100%;
+      }
+
+      .cookie-grid {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="brand" aria-label="Apex Synchro home">
+        <span class="logo-mark" aria-hidden="true"></span>
+        <span>Apex Synchro</span>
+      </a>
+
+      <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">+</button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a class="active" href="about.html">About</a></li>
+        <li><a href="logistics.html">Logistics &amp; Export</a></li>
+        <li><a href="quality.html">Quality &amp; Compliance</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <a class="btn btn-primary desktop-cta" href="quote.html">Request a Quote</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="about-hero">
+      <div class="inner" data-reveal>
+        <p class="crumbs"><a href="index.html">Home</a> &nbsp;&rsaquo;&nbsp; About</p>
+        <p class="kicker">About Apex Synchro</p>
+        <h1>Built on Trust. Driven by Precision.</h1>
+        <p>
+          For over 15 years, Apex Synchro has been the supply chain partner of choice for healthcare
+          organizations that cannot afford compromise — delivering ISO-certified surgical consumables to
+          50+ countries with unmatched reliability.
+        </p>
+      </div>
+    </section>
+
+    <section class="mission">
+      <div class="mission-grid">
+        <div class="mission-statement" data-reveal>
+          <p class="kicker">Our Mission</p>
+          <p>
+            To strengthen global healthcare supply chains by connecting world-class manufacturers with
+            hospitals, distributors, and health agencies — ensuring that the right medical consumables reach
+            the right hands, on time, every time, fully compliant.
+          </p>
+        </div>
+
+        <div class="value-grid">
+          <article class="value-card" data-reveal>
+            <div class="icon-chip"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path></svg></div>
+            <h3>Integrity</h3>
+            <p>We operate with full transparency in pricing, documentation, and compliance. No shortcuts, no substitutions.</p>
+          </article>
+
+          <article class="value-card" data-reveal>
+            <div class="icon-chip"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg></div>
+            <h3>Precision</h3>
+            <p>Every shipment is planned, documented, and verified. We treat each order as mission-critical — because for our clients, it is.</p>
+          </article>
+
+          <article class="value-card" data-reveal>
+            <div class="icon-chip"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div>
+            <h3>Partnership</h3>
+            <p>We build long-term relationships with buyers and manufacturers alike — not transactional exchanges, but strategic alliances.</p>
+          </article>
+
+          <article class="value-card" data-reveal>
+            <div class="icon-chip"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6"></path><path d="m9 15 2 2 4-4"></path></svg></div>
+            <h3>Compliance</h3>
+            <p>Regulatory adherence is non-negotiable. We maintain certifications and documentation to the highest international standards.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="story">
+      <div class="story-grid">
+        <div class="story-media" data-reveal>
+          <img src="https://images.unsplash.com/photo-1601598851547-4302969d0614?auto=format&fit=crop&w=1200&q=80" alt="Global distribution warehouse" />
+          <div class="story-badge">
+            <strong>15+</strong>
+            <span>Years in Global Trade</span>
+          </div>
+        </div>
+
+        <div class="story-text" data-reveal>
+          <p class="kicker">Our Story</p>
+          <h2>From Regional Distributor to Global Trade Partner</h2>
+          <p>
+            Apex Synchro was founded on a single conviction: that healthcare supply chains deserve the same
+            precision and reliability as the clinical procedures they support. What began as a regional
+            distribution operation has grown into a globally recognized B2B trade partner, serving clients
+            across Asia, Europe, the Americas, and the Middle East.
+          </p>
+          <p>
+            Over the years, we have built deep relationships with ISO-certified manufacturers across Southeast
+            Asia and established logistics corridors that span six continents. Our team combines decades of
+            experience in pharmaceutical trade, export compliance, and international logistics.
+          </p>
+          <p>
+            Today, Apex Synchro manages millions of units annually — from surgical rubber gloves to
+            medical-grade wipes — ensuring that every product that leaves our supply chain meets the exact
+            specifications our clients depend on.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="milestones">
+      <div class="head" data-reveal>
+        <p class="kicker">Our Journey</p>
+        <h2>Key Milestones</h2>
+      </div>
+
+      <div class="timeline">
+        <article class="milestone" data-reveal>
+          <span class="dot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="12"></circle></svg></span>
+          <p class="year">2009</p>
+          <h4>Founded</h4>
+          <p>Apex Synchro established as a regional pharmaceutical trade company.</p>
+        </article>
+
+        <article class="milestone" data-reveal>
+          <span class="dot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="12"></circle></svg></span>
+          <p class="year">2012</p>
+          <h4>ISO 9001 Certified</h4>
+          <p>Achieved ISO 9001 quality management certification across all operations.</p>
+        </article>
+
+        <article class="milestone" data-reveal>
+          <span class="dot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="12"></circle></svg></span>
+          <p class="year">2015</p>
+          <h4>Global Expansion</h4>
+          <p>Expanded logistics network to Europe and the Americas, serving 30+ countries.</p>
+        </article>
+
+        <article class="milestone" data-reveal>
+          <span class="dot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="12"></circle></svg></span>
+          <p class="year">2018</p>
+          <h4>FDA Registration</h4>
+          <p>Completed FDA registration for surgical glove product lines, ensuring US market access.</p>
+        </article>
+
+        <article class="milestone" data-reveal>
+          <span class="dot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="12"></circle></svg></span>
+          <p class="year">2021</p>
+          <h4>WHO GMP Compliance</h4>
+          <p>Achieved WHO GMP compliance for medical wipes product range.</p>
+        </article>
+
+        <article class="milestone" data-reveal>
+          <span class="dot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="12"></circle></svg></span>
+          <p class="year">2024</p>
+          <h4>50+ Countries</h4>
+          <p>Active supply relationships across 50+ countries on six continents.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="leaders">
+      <div class="head" data-reveal>
+        <p class="kicker">The People Behind Apex Synchro</p>
+        <h2>Leadership Team</h2>
+        <p>Decades of combined experience in pharmaceutical trade, export compliance, and international logistics.</p>
+      </div>
+
+      <div class="leader-grid">
+        <article class="leader-card" data-reveal>
+          <img class="leader-photo" src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=80" alt="Rajiv Mehta" />
+          <h3>Rajiv Mehta</h3>
+          <p class="leader-role">Chief Executive Officer</p>
+          <p>20+ years in global pharmaceutical trade. Former regional director at a Fortune 500 medical device company. Leads Apex Synchro's strategic partnerships and market expansion.</p>
+        </article>
+
+        <article class="leader-card" data-reveal>
+          <img class="leader-photo" src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=400&q=80" alt="Sarah Lindqvist" />
+          <h3>Sarah Lindqvist</h3>
+          <p class="leader-role">Head of Global Logistics</p>
+          <p>Expert in international freight, Incoterms, and export documentation. Oversees Apex Synchro's logistics corridors across Asia, Europe, and the Americas.</p>
+        </article>
+
+        <article class="leader-card" data-reveal>
+          <img class="leader-photo" src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=400&q=80" alt="Dr. Amir Hassan" />
+          <h3>Dr. Amir Hassan</h3>
+          <p class="leader-role">Director of Quality &amp; Compliance</p>
+          <p>PhD in Pharmaceutical Sciences. Manages ISO, CE, FDA, and WHO GMP certification programs and ensures every product batch meets international regulatory standards.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="operations">
+      <div class="head" data-reveal>
+        <p class="kicker">Where We Operate</p>
+        <h2>A Truly Global Operation</h2>
+        <p>Our sourcing, logistics, and client relationships span six continents — enabling us to serve healthcare supply chains wherever they operate.</p>
+      </div>
+
+      <div class="ops-grid">
+        <article class="ops-card" data-reveal>
+          <div class="bar"></div>
+          <h4>Asia Pacific</h4>
+          <span class="ops-tag">Primary Sourcing Hub</span>
+          <p>Manufacturing partnerships in Malaysia, India, China, and Singapore.</p>
+        </article>
+
+        <article class="ops-card" data-reveal>
+          <div class="bar"></div>
+          <h4>Europe</h4>
+          <span class="ops-tag">Distribution &amp; Compliance</span>
+          <p>CE-certified product distribution to Germany, UK, France, and the Netherlands.</p>
+        </article>
+
+        <article class="ops-card" data-reveal>
+          <div class="bar"></div>
+          <h4>Americas</h4>
+          <span class="ops-tag">FDA-Registered Supply</span>
+          <p>FDA-registered product lines serving the USA, Canada, Brazil, and Mexico.</p>
+        </article>
+
+        <article class="ops-card" data-reveal>
+          <div class="bar"></div>
+          <h4>Middle East &amp; Africa</h4>
+          <span class="ops-tag">Emerging Market Growth</span>
+          <p>Active supply relationships in UAE, Saudi Arabia, South Africa, and Kenya.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="inner">
+        <div class="cta-text" data-reveal>
+          <p class="kicker">Work With Us</p>
+          <h2>Ready to Build a Supply Partnership?</h2>
+          <p>
+            Whether you're a hospital procurement team, an international distributor, or a government health
+            agency, our B2B team is ready to discuss your requirements.
+          </p>
+        </div>
+
+        <div class="cta-actions" data-reveal>
+          <a class="btn btn-primary" href="#">Request a Quote →</a>
+          <a class="btn btn-secondary" href="#">Contact Our Team</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="brand" style="color:#d2e5f6;margin-bottom:10px;display:inline-flex;">
+          <span class="logo-mark" aria-hidden="true"></span>
+          <span>Apex Synchro</span>
+        </a>
+        <p>
+          Global leader in pharmaceutical and surgical materials trade. Supplying premium medical consumables to
+          hospitals, distributors, and health agencies worldwide.
+        </p>
+        <a href="#" class="foot-site"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20"></path><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>apexsynchro.com</a>
+      </div>
+
+      <div>
+        <h5>Quick Links</h5>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="logistics.html">Logistics &amp; Export</a>
+        <a href="quality.html">Quality &amp; Compliance</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="quote.html">Request a Quote</a>
+      </div>
+
+      <div>
+        <h5>Products</h5>
+        <a href="products.html">Surgical Rubber Gloves</a>
+        <a href="products.html">Medical-Grade Wipes</a>
+        <a href="products.html">Examination Gloves</a>
+        <a href="products.html">Sterile Gloves</a>
+        <a href="#">Bulk Order Inquiry</a>
+      </div>
+
+      <div>
+        <h5>Contact</h5>
+        <div class="foot-contact-item">
+          <svg class="foot-ico" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+          <div>
+            <span class="foot-label">Email</span>
+            <a href="mailto:trade@apexsynchro.com">trade@apexsynchro.com</a>
+          </div>
+        </div>
+        <div class="foot-contact-item">
+          <svg class="foot-ico" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          <div>
+            <span class="foot-label">Phone</span>
+            <a href="tel:+1800279796">+1 (800) APEX-SYN</a>
+          </div>
+        </div>
+        <div class="foot-contact-item">
+          <svg class="foot-ico" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          <div>
+            <span class="foot-label">Headquarters</span>
+            <p>Global Trade Center<br />apexsynchro.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="cookie-bar" id="cookieBar">
+    <div class="cookie-grid">
+      <div class="c-text">
+        <strong>Cookie Consent</strong>
+        <p>
+          We serve cookies. We use tools, such as cookies, to enable essential services and functionality on our
+          site and to collect data on how visitors interact with our site, products and services. By clicking
+          Accept, you agree to our use of these tools for advertising, analytics and support.
+        </p>
+      </div>
+      <div class="cookie-actions">
+        <button class="cookie-btn decline" id="cookieDecline" type="button">Decline</button>
+        <button class="cookie-btn accept" id="cookieAccept" type="button">Accept</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script>
+    (function () {
+      const menuBtn = document.getElementById("menuBtn");
+      const navLinks = document.getElementById("navLinks");
+      menuBtn.addEventListener("click", function () {
+        navLinks.classList.toggle("open");
+      });
+
+      const cookieBar = document.getElementById("cookieBar");
+      document.getElementById("cookieAccept").addEventListener("click", function () {
+        cookieBar.style.display = "none";
+      });
+      document.getElementById("cookieDecline").addEventListener("click", function () {
+        cookieBar.style.display = "none";
+      });
+
+      if (window.gsap && window.ScrollTrigger) {
+        gsap.registerPlugin(ScrollTrigger);
+
+        gsap.from(".about-hero .inner", {
+          y: 26,
+          opacity: 0,
+          duration: 0.8,
+          ease: "power2.out",
+          delay: 0.15
+        });
+
+        gsap.utils.toArray("[data-reveal]").forEach(function (el) {
+          if (el.closest(".about-hero")) return;
+          gsap.fromTo(
+            el,
+            { y: 22, opacity: 0 },
+            {
+              y: 0,
+              opacity: 1,
+              duration: 0.7,
+              ease: "power2.out",
+              scrollTrigger: { trigger: el, start: "top 88%" }
+            }
+          );
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
