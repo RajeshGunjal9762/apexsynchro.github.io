@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apex Synchro | Request a Quote</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="48x48" href="Images/favicon-48x48.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="Images/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="Images/favicon-16x16.png" />
+  <link rel="icon" type="image/svg+xml" href="Images/favicon.svg" />
+  <link rel="apple-touch-icon" sizes="180x180" href="Images/apple-touch-icon.png" />
+  <link rel="manifest" href="site.webmanifest" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="page-quote">
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="brand" aria-label="Apex Synchro home">
+        <img class="brand-logo" src="Images/logo.svg" alt="" aria-hidden="true" />
+      </a>
+
+      <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">+</button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="logistics.html">Logistics &amp; Export</a></li>
+        <li><a href="quality.html">Quality &amp; Compliance</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <a class="btn btn-primary desktop-cta" href="quote.html">Request a Quote</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="quote-hero">
+      <div class="inner" data-reveal>
+        <p class="crumbs"><a href="index.html">Home</a> &nbsp;&rsaquo;&nbsp; Request a Quote</p>
+        <p class="kicker">Request a Quote</p>
+        <h1>Get a Bulk Order Quote.</h1>
+        <p>
+          Complete the form below with your requirements. Our trade team will prepare a tailored quotation —
+          including unit pricing, MOQ confirmation, lead time, and landed cost estimate — within one business day.
+        </p>
+      </div>
+    </section>
+
+    <section class="quote-body">
+      <div class="quote-grid">
+        <div class="form-card" data-reveal>
+          <form id="quoteForm" novalidate>
+            <h3 class="form-step-title">1. Your Details</h3>
+            <div class="form-grid">
+              <div class="field">
+                <label>Full Name <span class="req">*</span></label>
+                <input type="text" name="fullName" placeholder="Dr. Jane Smith" required />
+              </div>
+              <div class="field">
+                <label>Work Email <span class="req">*</span></label>
+                <input type="email" name="email" placeholder="jane@hospital.org" required />
+              </div>
+              <div class="field">
+                <label>Organisation <span class="req">*</span></label>
+                <input type="text" name="org" placeholder="City General Hospital" required />
+              </div>
+              <div class="field">
+                <label>Country / Destination <span class="req">*</span></label>
+                <input type="text" name="country" placeholder="Germany" required />
+              </div>
+              <div class="field span-2">
+                <label>Organisation Type</label>
+                <select name="orgType">
+                  <option value="">Select your organisation type...</option>
+                  <option>Hospital / Healthcare Group</option>
+                  <option>Pharmaceutical Distributor</option>
+                  <option>Government Health Agency</option>
+                  <option>Medical Device Importer</option>
+                  <option>NGO / Aid Organization</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+
+            <h3 class="form-step-title mt">2. Order Requirements</h3>
+            <div class="form-grid">
+              <div class="field span-2">
+                <label>Product of Interest <span class="req">*</span></label>
+                <select name="product" required>
+                  <option value="">Select a product...</option>
+                  <option>Surgical Latex Gloves — Sterile</option>
+                  <option>Nitrile Examination Gloves</option>
+                  <option>Sterile Neoprene Surgical Gloves</option>
+                  <option>Antiseptic Skin Wipes</option>
+                  <option>Surface Disinfectant Wipes</option>
+                  <option>Sterile Wound Care Wipes</option>
+                  <option>Custom / Mixed Shipment</option>
+                </select>
+              </div>
+              <div class="field">
+                <label>Estimated Quantity <span class="req">*</span></label>
+                <select name="quantity" required>
+                  <option value="">Select quantity range...</option>
+                  <option>Under 10,000 units</option>
+                  <option>10,000 - 50,000 units</option>
+                  <option>50,000 - 250,000 units</option>
+                  <option>250,000 - 1,000,000 units</option>
+                  <option>1,000,000+ units</option>
+                </select>
+              </div>
+              <div class="field">
+                <label>Delivery Timeline <span class="req">*</span></label>
+                <select name="timeline" required>
+                  <option value="">Select timeline...</option>
+                  <option>Urgent (1-2 weeks)</option>
+                  <option>Short term (2-4 weeks)</option>
+                  <option>Planned (1-3 months)</option>
+                  <option>Long term (3+ months)</option>
+                </select>
+              </div>
+              <div class="field span-2">
+                <label>Preferred Incoterms <span class="opt">(optional)</span></label>
+                <input type="text" name="incoterms" placeholder="e.g. DDP, CIF, FOB — or leave blank and we'll recommend" />
+              </div>
+              <label class="checkbox-row">
+                <input type="checkbox" name="privateLabel" />
+                <span class="cb-text">
+                  <strong>I'm interested in private label / custom branding</strong>
+                  <span>We offer custom packaging and private label options for qualifying order volumes.</span>
+                </span>
+              </label>
+            </div>
+
+            <h3 class="form-step-title mt">3. Additional Information</h3>
+            <div class="form-grid">
+              <div class="field span-2">
+                <label>Anything else we should know? <span class="opt">(optional)</span></label>
+                <textarea name="notes" placeholder="Specific size requirements, certification needs for your market, tender reference numbers, existing supplier context, or any other relevant details..."></textarea>
+              </div>
+            </div>
+
+            <button class="btn btn-submit" type="submit">Submit Quote Request →</button>
+            <p class="form-note">Fields marked * are required. We respond within one business day.</p>
+            <div class="form-success" id="formSuccess">Thank you — your quote request has been submitted. Our trade team will respond within one business day.</div>
+          </form>
+        </div>
+
+        <aside class="side" data-reveal>
+          <div class="side-box">
+            <h3>What to expect</h3>
+            <div class="expect-item">
+              <span class="e-ico"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></span>
+              <div>
+                <strong>Response within 24 hours</strong>
+                <p>Every quote request is reviewed by a trade specialist and responded to within one business day.</p>
+              </div>
+            </div>
+            <div class="expect-item">
+              <span class="e-ico"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7z"></path><path d="M14 2v5h5"></path><path d="M16 13H8"></path><path d="M16 17H8"></path><path d="M10 9H8"></path></svg></span>
+              <div>
+                <strong>Itemised quotation</strong>
+                <p>We provide unit pricing, MOQ tiers, lead time, packaging details, and an estimated landed cost for your destination.</p>
+              </div>
+            </div>
+            <div class="expect-item">
+              <span class="e-ico"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg></span>
+              <div>
+                <strong>Full compliance documentation</strong>
+                <p>Every quotation includes available certifications and can be accompanied by a compliance dossier for tender submissions.</p>
+              </div>
+            </div>
+            <div class="expect-item">
+              <span class="e-ico"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg></span>
+              <div>
+                <strong>50+ countries served</strong>
+                <p>Our logistics team will recommend the optimal Incoterms and freight solution for your destination market.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="side-box plain">
+            <h3>Need compliance documents first?</h3>
+            <p>Review our certifications and available documentation before submitting a quote request.</p>
+            <a class="side-link" href="quality.html">View Quality &amp; ISO Compliance →</a>
+          </div>
+
+          <div class="side-box dark">
+            <h3>Prefer to speak directly?</h3>
+            <p>Our trade team is available for calls to discuss large or complex requirements before a formal quote.</p>
+            <a class="side-link" href="contact.html">Contact our trade team →</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="brand" style="color:#d2e5f6;margin-bottom:10px;display:inline-flex;" aria-label="Apex Synchro home">
+          <img class="brand-logo" src="Images/LOGO WHITE.svg" alt="" aria-hidden="true" />
+        </a>
+        <p>
+          Global leader in pharmaceutical and surgical materials trade. Supplying premium medical consumables to
+          hospitals, distributors, and health agencies worldwide.
+        </p>
+        <a href="#" class="foot-site"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20"></path><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg> &nbsp; apexsynchro.com</a>
+      </div>
+
+      <div>
+        <h5>Quick Links</h5>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="logistics.html">Logistics &amp; Export</a>
+        <a href="quality.html">Quality &amp; Compliance</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="quote.html">Request a Quote</a>
+      </div>
+
+      <div>
+        <h5>Products</h5>
+        <a href="products.html">Surgical Rubber Gloves</a>
+        <a href="products.html">Medical-Grade Wipes</a>
+        <a href="products.html">Examination Gloves</a>
+        <a href="products.html">Sterile Gloves</a>
+        <a href="quote.html">Bulk Order Inquiry</a>
+      </div>
+
+      <div>
+        <h5>Contact</h5>
+        <div class="foot-contact-item">
+          <svg class="foot-ico" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+          <div>
+            <span class="foot-label">Email</span>
+            <a href="mailto:trade@apexsynchro.com">trade@apexsynchro.com</a>
+          </div>
+        </div>
+        <div class="foot-contact-item">
+          <svg class="foot-ico" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          <div>
+            <span class="foot-label">Phone</span>
+            <a href="tel:+1800279796">+1 (800) APEX-SYN</a>
+          </div>
+        </div>
+        <div class="foot-contact-item">
+          <svg class="foot-ico" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          <div>
+            <span class="foot-label">Headquarters</span>
+            <p>Global Trade Center<br />apexsynchro.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="cookie-bar" id="cookieBar">
+    <div class="cookie-grid">
+      <div class="c-text">
+        <strong>Cookie Consent</strong>
+        <p>
+          We serve cookies. We use tools, such as cookies, to enable essential services and functionality on our
+          site and to collect data on how visitors interact with our site, products and services. By clicking
+          Accept, you agree to our use of these tools for advertising, analytics and support.
+        </p>
+      </div>
+      <div class="cookie-actions">
+        <button class="cookie-btn decline" id="cookieDecline" type="button">Decline</button>
+        <button class="cookie-btn accept" id="cookieAccept" type="button">Accept</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script>
+    (function () {
+      const menuBtn = document.getElementById("menuBtn");
+      const navLinks = document.getElementById("navLinks");
+      menuBtn.addEventListener("click", function () { navLinks.classList.toggle("open"); });
+
+      const cookieBar = document.getElementById("cookieBar");
+      document.getElementById("cookieAccept").addEventListener("click", function () { cookieBar.style.display = "none"; });
+      document.getElementById("cookieDecline").addEventListener("click", function () { cookieBar.style.display = "none"; });
+
+      const form = document.getElementById("quoteForm");
+      const success = document.getElementById("formSuccess");
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        let valid = true;
+        form.querySelectorAll("[required]").forEach(function (el) {
+          if (!el.value.trim()) { valid = false; el.style.borderColor = "#e0574f"; }
+          else { el.style.borderColor = "#cfdcec"; }
+        });
+        if (!valid) return;
+        success.style.display = "block";
+        form.reset();
+        success.scrollIntoView({ behavior: "smooth", block: "center" });
+      });
+
+      if (window.gsap && window.ScrollTrigger) {
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.from(".quote-hero .inner", { y: 26, opacity: 0, duration: 0.8, ease: "power2.out", delay: 0.15 });
+        gsap.utils.toArray("[data-reveal]").forEach(function (el) {
+          if (el.closest(".quote-hero")) return;
+          gsap.fromTo(el, { y: 22, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, ease: "power2.out", scrollTrigger: { trigger: el, start: "top 88%" } });
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
